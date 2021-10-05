@@ -4,6 +4,10 @@
 
     from progress_bar import ProgressBar
 
+## Download
+
+    Download the progress_bar.py file and copy it into your computer's python lib/python/site-packages directory.
+
 ## Usage
 
     <bar1> = ProgressBar(increment=1, target=100, annotation=True, percentage=50)
@@ -19,4 +23,5 @@
 ## Notes
 
     Values are always rounded down to the nearest increment multiple.
+
     For example, a target value of 63, given an increment value of 5, would round to 60.

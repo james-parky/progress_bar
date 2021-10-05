@@ -1,4 +1,4 @@
-# Custom terminal progress bar in python
+# Custom terminal progress bar
 
 ## Import
 

@@ -1,10 +1,12 @@
 # Custom terminal progress bar
 
-## Import
+## Python
+
+### Import
 
     from progress_bar import ProgressBar
 
-## Manual download
+### Manual download
 
     Download the progress_bar.py file and copy it into your computer's
     python lib/python/site-packages directory.
@@ -15,7 +17,7 @@
         >>import sys
         >>print(sys.path)
 
-## Usage
+### Usage
 
     <bar1> = ProgressBar(increment=1, target=100, annotation=True, percentage=50)
 
@@ -31,8 +33,12 @@
     percentage: The current percentage that the bar is filled.
                 (Integer / Float) (Default value of 0)
 
-## Notes
+### Notes
 
     Values are always rounded down to the nearest increment multiple.
 
     For example, a target value of 63, given an increment value of 5, would round to 60.
+    
+## C++
+## Java
+## C

@@ -2,7 +2,7 @@
 
 __author__ = "James Parkington"
 __license__ = "Public Domain"
-__version__ = "1.1"
+__version__ = "1.2"
 
 _TARGET_COLOUR = '\33[31m'
 _BASE_COLOUR = '\33[0m'
@@ -26,10 +26,9 @@ def draw_progress_bar(increment: int = 2,
 
     if not(isinstance(percentage, int) and 0 <= percentage <= 100):
         raise ValueError(
-            'Percentage must be an integer or float in the range 0-100.')
+            'Percentage must be an integer in the range 0-100.')
 
-    int_percentage = int(percentage)
-    rounded_percentage = int_percentage - (int_percentage % increment)
+    rounded_percentage = percentage - (percentage % increment)
     num_filled_ticks = rounded_percentage // increment
     num_empty_ticks = 100//increment - num_filled_ticks
 

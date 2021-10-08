@@ -2,7 +2,7 @@
 
 __author__ = "James Parkington"
 __license__ = "Public Domain"
-__version__ = "1.0"
+__version__ = "1.1"
 
 _TARGET_COLOUR = '\33[31m'
 _BASE_COLOUR = '\33[0m'

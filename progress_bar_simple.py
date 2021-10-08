@@ -10,7 +10,10 @@ _FILLED_TICK = '█'
 _EMPTY_TICK = '-'
 
 
-def draw_progress_bar(increment: int = 2, target: int = 100, percentage: int = 0, annotation: bool = True):
+def draw_progress_bar(increment: int = 2,
+                      target: int = 100,
+                      percentage: int = 0,
+                      annotation: bool = True):
     '''Print the progress bar to terminal'''
     if increment not in [1, 2, 5]:
         raise ValueError('Increment must be equal to 1, 2 or 5.')

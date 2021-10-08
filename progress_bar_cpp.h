@@ -3,7 +3,7 @@ Class for printing custom progress bars
 
 Author: James Parkington
 License: Prublic Domain
-Version: 1.1
+Version: 1.2
 */
 #include <iostream>
 #include <stdexcept>
@@ -19,6 +19,7 @@ class ProgressBar {
   float percentage;
   bool annotation;
 
+ public:
   void setIncrement(int value) {
     if (value == 1 || value == 2 || value == 5) {
       increment = value;
@@ -63,7 +64,6 @@ class ProgressBar {
     progressBar[(roundedTarget / increment) - 1] = TARGET_TICK;
   }
 
- public:
   ProgressBar(int inc, int tar, float per, bool anno) {
     setIncrement(inc);
     setTarget(tar);

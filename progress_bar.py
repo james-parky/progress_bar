@@ -2,7 +2,7 @@
 
 __author__ = "James Parkington"
 __license__ = "Public Domain"
-__version__ = "1.1"
+__version__ = "1.2"
 
 _TARGET_COLOUR = '\33[31m'
 _BASE_COLOUR = '\33[0m'
@@ -75,10 +75,8 @@ class ProgressBar():
     def draw(self):
         '''Print the progress bar to terminal'''
         progress_bar = [_EMPTY_TICK] * (100 // self.increment)
-
         int_percentage = int(self.percentage)
         rounded_percentage = int_percentage - (int_percentage % self.increment)
-
         num_filled_ticks = rounded_percentage // self.increment
 
         for i in range(num_filled_ticks):

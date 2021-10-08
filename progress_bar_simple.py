@@ -2,7 +2,7 @@
 
 __author__ = "James Parkington"
 __license__ = "Public Domain"
-__version__ = "1.2"
+__version__ = "1.3"
 
 _TARGET_COLOUR = '\33[31m'
 _BASE_COLOUR = '\33[0m'
@@ -39,7 +39,3 @@ def draw_progress_bar(increment: int = 2,
                  increment)-1] = f'{_TARGET_COLOUR}{_FILLED_TICK}{_BASE_COLOUR}'
 
     print((f'|{"".join(progress_bar)}|') + ['', f'{percentage}%'][annotation])
-
-
-if __name__ == '__main__':
-    draw_progress_bar(increment=2, target=80, percentage=50, annotation=True)

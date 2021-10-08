@@ -3,7 +3,7 @@ Class for printing custom progress bars
 
 Author: James Parkington
 License: Prublic Domain
-Version: 1.0
+Version: 1.1
 */
 #include <iostream>
 #include <stdexcept>
@@ -46,28 +46,22 @@ class ProgressBar {
     }
   }
 
+  void setAnnotation(bool value) { annotation = value; }
+
   void setProgressBar(char* progressBar) {
     int numberOfTicks = 100 / increment;
-
     for (int i = 0; i < numberOfTicks; i++) {
       progressBar[i] = EMPTY_TICK;
     }
-
     int intPercentage = (int)percentage;
     int roundedPercentage = intPercentage - (intPercentage % increment);
-
     int numberOfFilledTicks = roundedPercentage / increment;
-
     for (int i = 0; i < numberOfFilledTicks; i++) {
       progressBar[i] = FILLED_TICK;
     }
-
     int roundedTarget = target - (target % increment);
-
     progressBar[(roundedTarget / increment) - 1] = TARGET_TICK;
   }
-
-  void setAnnotation(bool value) { annotation = value; }
 
  public:
   ProgressBar(int inc, int tar, float per, bool anno) {
@@ -90,9 +84,3 @@ class ProgressBar {
     std::cout << std::endl;
   }
 };
-
-int main() {
-  ProgressBar bar1 = ProgressBar(2, 80, 50.0, true);
-  bar1.draw();
-  return 0;
-}
